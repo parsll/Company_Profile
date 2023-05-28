@@ -1,0 +1,261 @@
+@font-face {
+  font-family: outfit;
+  src: url("../../assets/packages/Fonts/Outfit/Outfit-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: almarai;
+  src: url("../../assets/packages/Fonts/Almarai/Almarai-Regular.ttf");
+}
+
+:root {
+  --textColor: #e7e7e7;
+  --themeColor: #2bd7cd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* Background Image Edit */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -5;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.landing {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* height: calc(100vh - 100px);
+  margin-top: -100px; */
+}
+
+.backgroundImageLanding {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+
+#backgroundImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Logo */
+.landing .NavBar .logo {
+  width: clamp(100px, 5vw, 200px);
+  height: fit-content;
+  cursor: pointer;
+}
+
+.landing .NavBar .logo #logo {
+  width: clamp(120px, 25vw, 200px);
+  object-fit: cover;
+}
+
+/* Navigation Bar */
+.landing .NavBar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 5px clamp(1rem, 3vw, 5rem);
+  position: fixed;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(50px) saturate(70%);
+  z-index: 100;
+  width: 100vw;
+  top: 0;
+}
+
+.landing .NavBar .listOfMenu {
+  display: flex;
+  gap: clamp(0.1rem, 5vw, 15rem);
+  align-items: center;
+  color: var(--textColor);
+  margin-left: auto;
+  margin-right: 2rem;
+}
+@media screen and (max-width: 900px) {
+  .landing .NavBar .listOfMenu {
+    display: block;
+  }
+  .landing .NavBar #hamburg {
+    display: flex;
+  }
+  .hidden {
+    display: none !important;
+  }
+}
+.landing .NavBar .listOfMenu li {
+  list-style: none;
+  color: var(--textColor);
+}
+
+.landing .NavBar .listOfMenu li {
+  list-style: none;
+}
+
+.active::first-letter {
+  color: var(--themeColor);
+  font-weight: bold;
+}
+
+.landing .NavBar .listOfMenu li a {
+  text-decoration: none;
+  position: relative;
+  font-family: outfit;
+  color: var(--textColor);
+}
+
+.landing .NavBar .listOfMenu li a:visited::after {
+  width: 100%;
+}
+
+.landing .NavBar .listOfMenu li a::after {
+  content: "";
+  position: absolute;
+  background: var(--themeColor);
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: -2px;
+  transition: 0.3s;
+}
+
+.landing .NavBar .listOfMenu li a:hover::after {
+  width: 100%;
+}
+
+/* Slogan Edition */
+.landing .slogan {
+  position: absolute;
+  top: 50%;
+  padding: 10px clamp(1rem, 10vw, 5rem);
+}
+
+.landing .slogan p {
+  height: fit-content;
+  font-size: clamp(25px, 7vw, 168px);
+  color: var(--textColor);
+  text-transform: uppercase;
+  font-family: almarai;
+  letter-spacing: 0.2cm;
+  font-weight: bold;
+}
+
+.landing .slogan p span {
+  color: var(--themeColor);
+}
+
+/* Icon Hamburg */
+.hamburg {
+  float: right;
+  margin-left: auto;
+  margin-right: 1rem;
+  display: none;
+}
+
+#hamburg {
+  font-size: 20px;
+  color: white;
+}
+
+/* Our Work */
+.ourwork {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 3rem;
+}
+@media screen and (max-width: 720px) {
+  .ourwork {
+    padding: 1rem;
+  }
+}
+.ourwork-title {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  gap: 0.5rem;
+}
+
+.ourwork-title--main {
+  text-transform: uppercase;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+.ourwork-title--sub {
+  text-transform: uppercase;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.ourwork-title--sub__main {
+  color: #2bd7cd;
+}
+
+.ourwork-main {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.ourwork-main--card {
+  width: clamp(12rem, 30vw, 15rem);
+  border: 0.5px solid #2bd7cd;
+  box-shadow: 0px 9px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
+  padding: 1rem;
+  overflow: hidden;
+}
+.ourwork-main--card__image {
+  width: 100%;
+  height: 10rem;
+}
+
+.ourwork-main--card__image > * {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.history {
+  background-color: #f0fbff;
+}
+
+.history-header {
+  padding: 1rem 0;
+}
+
+.history-main {
+  padding: 1rem 0;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.25rem;
+  line-height: 41px;
+  text-align: center;
+  letter-spacing: 0.005em;
+}

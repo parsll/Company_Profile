@@ -1,0 +1,261 @@
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  box-sizing: border-box;
+  font-family: Outfit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --parsllText: #2BD7CC;
+}
+
+
+img {
+  object-fit: contain;
+}
+
+.header {
+  font-size: clamp(2rem, 10vw, 2.25rem);
+  font-weight: 400;
+  padding-bottom: 1.5rem;
+}
+
+.header span {
+  color: var(--parsllText);
+}
+
+.container {
+  text-align: center;
+  font-size: clamp(.5rem, 10vw, 1.5rem);
+}
+
+.container .histry {
+  background-color: #f0fbff;
+  padding: clamp(5px, 5vw, 15rem);
+  text-align: center;
+}
+
+.container .histry .class {
+  text-align: justify;
+}
+
+/*------------ Our work section------------ */
+.work-section {
+  text-align: center;
+  /* margin-top: -200px; */
+  padding: 3rem 0;
+}
+
+.work-section .grid-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 1rem;
+
+}
+.crew .grid-container {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(auto, 1fr));
+  justify-content: center;
+}
+
+.grid-container .grid-item {
+  margin: 0 1rem;
+  padding: clamp(0.1rem, 4vw, 1rem) 0;
+  text-align: center;
+  width: fit-content;
+}
+
+@media screen and (max-width: 400px){
+  .grid-container .grid-item{
+    padding: .1rem 0;
+  }
+}
+
+.grid-container .grid-item img {
+  border-radius: 8%;
+  margin-top: 10px;
+  width: clamp(10rem, 80vw, 15rem);
+  height: 15rem;
+  object-fit: cover;
+}
+
+.gridd-container .grid-item img{
+  width: clamp(8rem, 60vw, 12rem);
+  height: 12rem;
+}
+
+
+.grid-container .grid-item p {
+  font-size: clamp(0.7rem, 7vw, 1.15rem);
+  color: rgba(59, 59, 59, 0.8);
+}
+
+.grid-container .grid-item .name {
+  margin-top: 0;
+  font-size: clamp(0.8rem, 8vw, 1.25rem);
+  color: rgba(59, 59, 59, 0.8);
+}
+
+/* --------  slider ------------ */
+.container .slider {
+  padding: 3rem 0 4rem 0;
+}
+
+.container .slider .slide-list .list {
+  display: flex;
+  justify-content: center;
+  object-fit: contain;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+/* --------meet the crew ----------- */
+
+/*------------ Our work section------------ */
+.work-section {
+  text-align: center;
+}
+
+
+
+/* Styles for desktop screens */
+.container .description {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: clamp(1px, 5vw, 5rem);
+  gap: 3rem;
+}
+
+.container .images {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+}
+
+.container .images img {
+  height: 30rem;
+  width: 100%;
+}
+
+.container .text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(5px, 5vw, 15rem);
+}
+
+.container .text h1 {
+  text-align: center;
+  font-size: clamp(20px, 10vw, 40px);
+}
+
+.container .description .text p {
+  text-align: justify;
+  font-size: 20px;
+}
+
+/* Styles for smaller screens */
+@media screen and (max-width: 765px) {
+  .container .description {
+    flex-direction: column;
+  }
+
+  .container .description .images {
+    order: 2;
+    object-fit: contain;
+  }
+
+  .container .description .text {
+    order: 1;
+  }
+
+  .container .description .images img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.clients {
+  padding: 3rem 0 5rem 0;
+  background-color: #fff;
+}
+
+.clients-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  font-family: "Inter";
+}
+
+.clients-title--title {
+  position: relative;
+  width: max-content;
+  cursor: pointer;
+  padding-bottom: 1rem;
+}
+
+.clients-main--image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: darken;
+  width: 13%;
+  filter: grayscale(85%) brightness(95%);
+  -webkit-filter: grayscale(85%) brightness(95%);
+  -moz-filter: grayscale(85%) brightness(95%);
+}
+
+.clients-main--image:hover {
+  filter: none;
+  -webkit-filter: none;
+  -moz-filter: none;
+}
+
+.logo-marquee--container {
+  position: relative;
+  height: 8rem;
+  padding: 1rem 0;
+  mix-blend-mode: darken;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.logo-marquee--container:hover .logo-marquee {
+  animation-play-state: paused;
+}
+
+.logo-marquee--container .logo-marquee {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  overflow: hidden;
+  right: 100%;
+  width: max-content;
+  animation: move-right-marquee 20s linear infinite;
+}
+
+
+@keyframes move-right-marquee {
+  0% {
+    right: 100%;
+  }
+
+  100% {
+    right: -110%;
+  }
+}
+
+
+.gridd-container img{
+  width: 10rem;
+}

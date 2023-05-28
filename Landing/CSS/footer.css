@@ -1,0 +1,195 @@
+/* Import the Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Variables for footer section[Parsll.com]*/
+:root {
+  --footer-background: #2BD7CD;
+  --footer-font: 'Poppins', sans-serif;
+  --footer-section-width: 12rem;
+  --footer-section-padding: 30px;
+  --footer-section-margin: 30px;
+  --footer-section-heading-size: 1.2rem;
+  --footer-section-heading-margin: 10px;
+  --footer-section-links-margin: 5px;
+  --footer-section-links-hover-color: #ffffff;
+  --footer-section-links-hover-line-height: 2px;
+  --media-max-width: 767px;
+}
+
+/* Style for the footer */
+footer {
+  background: var(--footer-background);
+  font-family: var(--footer-font);
+  padding: var(--footer-section-padding);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+}
+
+/* Style for each section within the footer */
+.footer-section {
+  width: var(--footer-section-width);
+  box-sizing: border-box;
+  padding-right: var(--footer-section-padding);
+  margin-bottom: var(--footer-section-margin);
+}
+
+/* Style for the h1 heading within each section */
+.footer-section h1 {
+  font-size: var(--footer-section-heading-size);
+  margin-bottom: var(--footer-section-heading-margin);
+  /* add some space below the heading */
+  color: #ffffff;
+}
+
+/* Style for the links within each section */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: var(--footer-section-links-margin);
+  /* decrease the margin between list items */
+}
+
+.footer-section a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s;
+  display: inline-block;
+  /* add display property to create hover effect */
+  position: relative;
+  /* add position property to create hover effect */
+  cursor: var(--social-icons-a-cursor);
+  /* add cursor pointer to indicate clickable */
+}
+
+.footer-section a:hover {
+  color: var(--footer-section-links-hover-color);
+  cursor: pointer;
+}
+
+/* add hover effect to create line on hover */
+.footer-section a:hover::before {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: var(--footer-section-links-hover-line-height);
+  background-color: var(--footer-section-links-hover-color);
+}
+
+/* /* Css for social Media Icon   */
+.CopyRightSection {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+  padding: 10px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.CopyRightSection a {
+  color: #333;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.CopyRightSection a:hover {
+  color: #0077b5;
+}
+
+.CopyRightSection p {
+  color: #333;
+  font-size: 12px;
+  margin: 0;
+}
+
+.CopyRightSection a[title]:hover:after {
+  content: attr(title);
+  padding: 20px;
+  background-color: #460202;
+  color: #fff;
+  font-size: 12px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(100% + 5px);
+  z-index: 1;
+  white-space: nowrap;
+  border-radius: 5px;
+}
+
+/* for playdtorebtn */
+.download-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 20px;
+}
+
+.app-store-btn,
+.play-store-btn {
+  display: inline-block;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #1c1f22;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+  margin-right: 10px;
+}
+
+.play-store-btn {
+  background-color: #b00516;
+}
+
+.play-store-btn:hover,
+.app-store-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* media queries for footer */
+@media screen and (max-width: 767px) {
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: start;
+  }
+
+  .footer-section {
+    /* flex: 1 1 50%; */
+    margin-bottom: 10px;
+    width: 10rem;
+  }
+
+  .footer-section:last-child {
+    flex-basis: 100%;
+  }
+
+  .app-store-btn,
+  .play-store-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+  }
+
+}

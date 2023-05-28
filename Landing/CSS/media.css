@@ -1,0 +1,62 @@
+/* media queries */
+
+@media screen and (max-width: 700px) {
+    
+    /* responsive Navigation bar  */
+    .landing .NavBar .listOfMenu {
+        position: absolute;
+        right: 0;
+        top: 4rem;
+        background: rgba(0, 0, 0, .7);
+        padding: 10px 40px;
+        width: fit-content;
+    }
+
+    .landing .NavBar .listOfMenu li {
+        margin: 20px 0;
+    }
+
+    .overlay {
+        height: 90vh;
+    }
+
+    .landing {
+        height: 90vh;
+    }
+
+    .backgroundImageLanding {
+        height: 90vh;
+    }
+    div#histry{
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .landing .slogan {
+        padding: 10px 1rem;
+    }
+    .overlay {
+        height: 70vh;
+    }
+
+    .landing {
+        height: 70vh;
+    }
+
+    .backgroundImageLanding {
+        height: 70vh;
+    }
+}
+
+
+@media screen and (min-width: 1380px){
+    .container, .work-section, .contactContainer{
+        width: 90rem;
+        margin: auto
+    }
+}
+
+@media screen and (max-height: 600){
+    
+}
