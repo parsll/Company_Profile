@@ -4,11 +4,13 @@
   font-family: Outfit;
   margin: 0;
   padding: 0;
+ 
 }
 
 :root {
   --parsllText: #2BD7CC;
 }
+
 
 
 img {
@@ -30,10 +32,28 @@ img {
   font-size: clamp(.5rem, 10vw, 1.5rem);
 }
 
+.container-main{
+  background-blend-mode:color-burn;
+}
+.container-main{
+  background-color: #02b6f726;
+}
 .container .histry {
-  background-color: #f0fbff;
   padding: clamp(5px, 5vw, 15rem);
   text-align: center;
+  background-image: url("../../assets/images/pexels-andrew-neel-2312369.jpg");
+
+  /* Set a specific height */
+  min-height: 200px;
+  opacity: 1;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  mix-blend-mode: overlay;
+color: #fff;
+  
 }
 
 .container .histry .class {
@@ -46,6 +66,11 @@ img {
   /* margin-top: -200px; */
   padding: 3rem 0;
 }
+.work-section h1{
+  color: var(--parsllText
+  );
+  padding: 1rem 0;
+}
 
 .work-section .grid-container {
   display: flex;
@@ -54,6 +79,10 @@ img {
   padding: 1rem;
   gap: 1rem;
 
+}
+.work-section .grid-container .grid-item{
+  width: 20%;
+  height: auto;
 }
 .crew .grid-container {
   display: grid;
@@ -129,6 +158,7 @@ img {
   align-items: flex-start;
   padding: clamp(1px, 5vw, 5rem);
   gap: 3rem;
+  
 }
 
 .container .images {
@@ -208,15 +238,16 @@ img {
   justify-content: center;
   mix-blend-mode: darken;
   width: 13%;
-  filter: grayscale(85%) brightness(95%);
-  -webkit-filter: grayscale(85%) brightness(95%);
-  -moz-filter: grayscale(85%) brightness(95%);
+  
 }
 
 .clients-main--image:hover {
   filter: none;
   -webkit-filter: none;
   -moz-filter: none;
+  filter: grayscale(85%) brightness(95%);
+  -webkit-filter: grayscale(85%) brightness(95%);
+  -moz-filter: grayscale(85%) brightness(95%);
 }
 
 .logo-marquee--container {
@@ -258,4 +289,47 @@ img {
 
 .gridd-container img{
   width: 10rem;
+}
+a{
+  text-decoration: none;
+}
+
+.swiper-container {
+  position: absolute;
+  overflow: hidden;
+  left: 0vw;
+  top: 0;
+  width: 100%;
+  height: 90%;
+  z-index: -1;
+}
+
+.swiper-pagination-bullet {
+  margin-top: 10rem !important;
+  left: 37.5% !important;
+  width: 1.25rem !important;
+  height: .5rem !important;
+  background-color: var(--parsllText) !important;
+  opacity: 0.95 !important;
+  transition: opacity 0.3s !important;
+  border-radius: 0 !important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+}
+
+.swiper-slide-card{
+ height: 100%;
+  position: relative;
+ 
+}
+.shadow{
+  display: none;
+}
+
+
+.swiper-slide-card > *{
+  object-fit: cover;
+
 }

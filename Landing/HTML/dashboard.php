@@ -15,6 +15,7 @@ if (!isset($_SESSION['email'])) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../CSS/dashboard.css?v=2">
+  <link rel="icon" href="../../favivon.ico" sizes="32x32" />
   <title>Parsll Dashboard</title>
   <style>
     html {

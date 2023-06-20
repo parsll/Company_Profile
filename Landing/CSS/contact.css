@@ -105,6 +105,7 @@ h1.contactHeading{
     border: none;
     font-family: outfit;
     cursor: pointer;
+    color: #F0F0F0;
 }
 .contactForm form .row input[type = 'submit']:hover{
     background: #029c95;

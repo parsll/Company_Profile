@@ -17,6 +17,7 @@ if (!isset($_SESSION['email'])) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="../../favivon.ico" sizes="32x32" />
     <link
         href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&family=Poppins:wght@500&family=Ubuntu:wght@300&display=swap"
         rel="stylesheet">

@@ -3,10 +3,10 @@
 
 /* Variables for footer section[Parsll.com]*/
 :root {
-  --footer-background: #2BD7CD;
+  --footer-background: rgba(26, 183, 175, 0.733);
   --footer-font: 'Poppins', sans-serif;
   --footer-section-width: 12rem;
-  --footer-section-padding: 30px;
+  --footer-section-padding: 30px 2.5rem 0 2.5rem;
   --footer-section-margin: 30px;
   --footer-section-heading-size: 1.2rem;
   --footer-section-heading-margin: 10px;
@@ -17,7 +17,8 @@
 }
 
 /* Style for the footer */
-footer {
+.footer  {
+  
   background: var(--footer-background);
   font-family: var(--footer-font);
   padding: var(--footer-section-padding);
@@ -25,6 +26,7 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
   text-align: left;
+  
 }
 
 /* Style for each section within the footer */
@@ -90,9 +92,11 @@ footer {
   justify-content: center;
   align-items: center;
   background-color: #f8f8f8;
-  padding: 10px;
+  padding: 1rem;
   width: 100%;
-  margin-top: 20px;
+  
+  margin-left: -30px;
+  margin-right: -60px;
 }
 
 .CopyRightSection a {

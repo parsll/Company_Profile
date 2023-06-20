@@ -13,6 +13,7 @@ if(!isset($_SESSION['email'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../favivon.ico" sizes="32x32" />
     <link rel="stylesheet" href="../CSS/form.css?v=2">
     <title>Add Project</title>
 </head>

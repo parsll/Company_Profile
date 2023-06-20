@@ -2,6 +2,9 @@
 session_start();
 require('db.inc.php');
 
+// =========================================================================
+// =============================== Contact Form ============================
+// =========================================================================
 
 //contact form
 if (isset($_POST['submit'])) {
@@ -52,19 +55,18 @@ if (isset($_POST['submit'])) {
 </head>
 <body>
     <div class="container-tick">
-<div class="pop-up" id="popup">
-    <img src="../../assets/images/success.png" alt="sucess">
-    <h2>Thank you !</h2>
-    <p>We will contact you as soon as possible</p>
-    <a href="../HTML/index.php"><button type="button" onclick="">Ok</button></a>
-</div>
+        <div class="pop-up" id="popup">
+            <img src="../../assets/images/success.png" alt="sucess">
+            <h2>Thank you !</h2>
+            <p>We will contact you as soon as possible</p>
+            <a href="../HTML/index.php"><button type="button">Ok</button></a>
+        </div>
     </div>
 </body>
 </html>
             ';
         }
     } catch (phpmailerException $e) {
-        // echo "<script>alert('Connection error');</script>";
         echo '
             <!DOCTYPE html>
 <html lang="en">
@@ -81,21 +83,21 @@ if (isset($_POST['submit'])) {
 </head>
 <body>
     <div class="container-tick">
-<div class="pop-up" id="popup">
-    <img src="../../assets/images/warning.png" alt="sucess">
-    <h2>Sorry !</h2>
-    <p> Something went wrong !</p>
-    <a href="../HTML/index.php"><button type="button" onclick="" style = "background-color: red;">Ok</button></a>
-</div>
+        <div class="pop-up" id="popup">
+            <img src="../../assets/images/warning.png" alt="sucess">
+            <h2>Sorry !</h2>
+            <p> Something went wrong !</p>
+            <a href="../HTML/index.php"><button type="button" style = "background-color: red;">Ok</button></a>
+        </div>
     </div>
 </body>
 </html>';
     }
 }
 
-//contact form end
-
-// login start
+// =========================================================================
+// ================================== Login ================================
+// =========================================================================
 
 if (isset($_POST['SignIn'])) {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
@@ -125,9 +127,9 @@ if (isset($_POST['SignIn'])) {
     }
 }
 
-// login end
-
-// Add Project
+// =========================================================================
+// =============================== Add Project =============================
+// =========================================================================
 
 if (isset($_POST['addProject'])) {
     $project_id = bin2hex(random_bytes(20));
@@ -145,13 +147,12 @@ if (isset($_POST['addProject'])) {
     $ext_arr = array('png', 'jpg', 'jpeg');
 
     if (in_array($last_ext, $ext_arr)) {
-        if ($size < 500000) {
+        if ($size < 300000) {
             $location = 'upload/' . $filename;
             move_uploaded_file($tempname, $location);
-            $sql = "INSERT INTO `projects` (`project_id`,`title`, `description`, `image`) VALUES ('$project_id','$title', '$description', '$location')";
-            $re = mysqli_query($conn, $sql);
-            if ($re) {
-
+            $addProjectQuery = "INSERT INTO `projects` (`project_id`,`title`, `description`, `image`) VALUES ('$project_id','$title', '$description', '$location')";
+            $addSuccess = mysqli_query($conn, $addProjectQuery);
+            if ($addSuccess) {
                 echo "<script>alert('Project Added successfully');
                 history.back();
                 </script>";
@@ -167,9 +168,10 @@ if (isset($_POST['addProject'])) {
          </script>";
     }
 }
-// Add Project endo
 
-// delete Project start
+// =========================================================================
+// ============================= Delete Project ============================
+// =========================================================================
 
 if (isset($_GET['id'])) {
     $projectId = mysqli_real_escape_string($conn, $_GET['id']);
@@ -185,9 +187,10 @@ if (isset($_GET['id'])) {
         </script>";
     }
 }
-// Delete Project end
 
-// update password start
+// =========================================================================
+// =============================== Change Password =========================
+// =========================================================================
 
 if(isset($_POST['update'])){
     $email = $_SESSION['email'];
@@ -200,6 +203,3 @@ if(isset($_POST['update'])){
         </script>";
     }
 }
-// update password end
-
-?>

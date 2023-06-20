@@ -1,5 +1,5 @@
 <?php
-  require("../PHP/db.inc.php");
+require("../PHP/db.inc.php");
 ?>
 
 <!DOCTYPE html>
@@ -9,8 +9,11 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../../favivon.ico" sizes="32x32" />
+
   <link rel="stylesheet" href="../CSS/landing.css?v=2" />
   <link rel="stylesheet" href="../css/media.css" />
+  <link rel="stylesheet" href="../swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="../../landing/CSS/BodyStyle.css" />
   <link rel="stylesheet" href="../css/footer.css" />
   <link rel="stylesheet" href="../css/landing.css" />
@@ -33,31 +36,51 @@
 </head>
 
 <body id="Home">
-  <div class="landing">
-    <div class="NavBar">
-      <div class="logo">
-        <img src="../../assets/images/PARSLL-Logo.png" alt="Company Logo" id="logo" />
-      </div>
-      <ul class="listOfMenu hidden" id="NavBar">
-        <li class="list list1"><a class="nav_link" href="#Home">Home</a></li>
-        <li class="list list2"><a class="nav_link" href="#Services">Services</a></li>
-        <li class="list list3"><a class="nav_link" href="#Blog">Blog</a></li>
-        <li class="list list4"><a class="nav_link" href="#Partner">Partner</a></li>
-        <li class="list list5"><a class="nav_link" href="#Project">Project</a></li>
-        <li class="list list6"><a class="nav_link" href="#ContactUs">ContactUs</a></li>
-        <li class="list list6"><a class="nav_link" href="login.php">login</a></li>
-      </ul>
-      <div class="hamburg" id="hamburg">
-        <i id="hamburgIcon" class="fa-solid fa-bars"></i>
-      </div>
+  <div class="NavBar">
+    <div class="logo">
+      <img src="../../assets/images/PARSLL-Logo.png" alt="Company Logo" id="logo" width="100%" height="100%" />
     </div>
+    <ul class="listOfMenu hidden" id="NavBar">
+      <li class="list list1"><a class="nav_link" href="#Home">Home</a></li>
+      <li class="list list2"><a class="nav_link" href="#Services">Services</a></li>
+      <li class="list list3"><a class="nav_link" href="#Blog">Blog</a></li>
+      <li class="list list4"><a class="nav_link" href="#Partner">Partner</a></li>
+      <li class="list list5"><a class="nav_link" href="#Project">Project</a></li>
+      <li class="list list6"><a class="nav_link" href="#ContactUs">ContactUs</a></li>
+      <li class="list list6"><a class="nav_link" href="login.php">login</a></li>
+    </ul>
+    <div class="hamburg" id="hamburg">
+      <i id="hamburgIcon" class="fa-solid fa-bars"></i>
+    </div>
+  </div>
+  <div class="landing">
+    <div class="landing-main"></div>
+
     <div class="slogan">
       <p><span>You</span><br />Say We Make</p>
     </div>
-  </div>
-  <div class="overlay"></div>
-  <div class="backgroundImageLanding">
-    <img src="../../assets/images/parsll-image.png" alt="Company Members" id="backgroundImage" />
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="swiper-slide-card">
+            <img height="100%" width="100%" src="../../assets/images/image 28.png" />
+
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-slide-card">
+            <img height="100%" width="100%" src="../../assets/images/image 29.png" />
+
+          </div>
+        </div>
+
+
+      </div>
+      <div class="swiper-pagination"></div>
+
+    </div>
+
+
   </div>
 
   <!-- Body Our Work -->
@@ -74,41 +97,49 @@
           <div class="ourwork-main--card__image">
             <img src="../../assets/images/img.png" />
           </div>
-          <div class="ourwork-main--car__main">Graphic Designing</div>
+          <div class="ourwork-main--card__main">Graphic Designing</div>
         </div>
         <div class="ourwork-main--card">
           <div class="ourwork-main--card__image">
             <img src="../../assets/images/img.png" />
           </div>
-          <div class="ourwork-main--car__main">WEB Development</div>
+          <div class="ourwork-main--card__main">WEB Development</div>
         </div>
         <div class="ourwork-main--card">
           <div class="ourwork-main--card__image">
             <img src="../../assets/images/img.png" />
           </div>
-          <div class="ourwork-main--car__main">App Development</div>
+          <div class="ourwork-main--card__main">App Development</div>
         </div>
         <div class="ourwork-main--card">
           <div class="ourwork-main--card__image">
             <img src="../../assets/images/img.png" />
           </div>
-          <div class="ourwork-main--car__main">Digital Marketing</div>
+          <div class="ourwork-main--card__main">Digital Marketing</div>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Body 2 Section -->
+
+
   <div class="container" id="histry" style="margin-bottom: 0rem;">
-    <div class="histry">
-      <h2 class="header">Little Information About <span>PARSLL</span></h2>
-      <p class="class">
-        It is a long established fact that a reader will be distracted by the
-        readable content of a page when looking at its layout. The point of
-        using Lorem Ipsum is that it has a more-or-less normal distribution of
-        letters, as opposed to using 'Content here, content here making it
-        look like readable English.
-      </p>
+    <div style="  " class="container-main">
+      <div class="histry">
+        <div>
+          <h2 class="header"> About <span><b>
+                US
+              </b></span></h2>
+          <p class="class">
+            Today, Parsll is one of the fastest-growing IT Companies in Nepal. The dream that a group of passionate
+            individuals saw sitting in a small cafe has turned into a reality. With a focus on creativity, innovation,
+            and customer satisfaction, Parsll is providing exceptional digital marketing, graphic designing, and web and
+            app development services that help businesses reach their full potential. From humble beginnings to a bright
+            and promising future, Parsll's story is a testament to the power of hard work, dedication, and perseverance.
+          </p>
+        </div>
+      </div>
     </div>
     <div class="work-section" style="margin-top: 0rem;" id="Project">
       <h2 class="header">OUR WORK</h2>
@@ -122,14 +153,15 @@
           $title = $row['title'];
           $description = $row['description'];
           $image = $row['image'];
-        ?>
-        <div class="grid-item">
-          <img src="../PHP/<?php echo $image; ?>" alt="image not supported" /><br />
-          <?php echo $title; ?>
-        </div>
+          ?>
+          <div class="grid-item">
+            <img src="../PHP/<?php echo $image; ?>" alt="image not supported" /><br />
+            <?php echo $title; ?>
+          </div>
         <?php } ?>
       </div>
     </div>
+
     <div id="Partner" class="slider">
       <h2 class="header">Partner</h2>
 
@@ -171,36 +203,61 @@
     <p>These are the people that make the magic happen.</p>
     <div class="grid-container">
       <div class="grid-item">
-        <img src="../../assets/images/ajju.jpg" alt="image not supported" /><br />
+        <img src="../../assets/images/ajju.png" alt="image not supported" /><br />
         <p class="name">Ajju maharjan</p>
         <p class="post">Core Designer</p>
       </div>
       <div class="grid-item">
-        <img src="../../assets/images/nisu.jpg" alt="image not supported" /><br />
+        <img src="../../assets/images/nischal.png" alt="image not supported" /><br />
         <p class="name">Nischal Acharya</p>
-        <p class="post">Backend</p>
-      </div>
-      <div class="grid-item">
-        <img src="../../assets/images/prajwal.png" alt="image not supported" /><br />
-        <p class="name">Sagar khadka</p>
-        <p>Backend</p>
+        <p class="post">Backend Developer</p>
       </div>
       <div class="grid-item">
         <img src="../../assets/images/santosh.png" alt="image not supported" /><br />
-        <p class="name">Sunte Ghimire</p>
-        <p>Frontend</p>
+        <p class="name">Santosh Ghimire</p>
+        <p class="post">Frontend developer</p>
       </div>
       <div class="grid-item">
         <img src="../../assets/images/sagar.png" alt="image not supported" /><br />
-        <p class="name">xavier</p>
-        <p>Designer</p>
+        <a href="https://sagarkhadka1.com.np">
+          <p class="name">Sagar Khadka</p>
+        </a>
+        <p class="post">Full stack Developer</p>
       </div>
       <div class="grid-item">
-        <img src="../../assets/images/ajju.jpg" alt="image not supported" /><br />
-        <p class="name">prajwal k ho</p>
-        <p>Designer</p>
+        <img src="../../assets/images/prajwol.png" alt="image not supported" /><br />
+        <a href="https://prajwollama.com.np">
+          <p class="name">Prajwol Lama</p>
+        </a>
+        <p>App developer/ SEO</p>
+      </div>
+      <div class="grid-item">
+        <img src="../../assets/images/surya.png" alt="image not supported" /><br />
+        <p class="name">Surya Narayan Chaudhary</p>
+        <p>Database Engineer</p>
+      </div>
+      <div class="grid-item">
+        <img src="../../assets/images/raaj.png" alt="image not supported" /><br />
+        <p class="name">Raj Ghimire</p>
+        <p class="post">Video editor</p>
+      </div>
+      <div class="grid-item">
+        <img src="../../assets/images/shibaa.png" alt="image not supported" /><br />
+        <p class="name">Shibaa Adhikari</p>
+        <p class="post">Project Manager</p>
+      </div>
+      <div class="grid-item">
+        <img src="../../assets/images/aashish.png" alt="image not supported" /><br />
+        <p class="name">Aashish Pokherel</p>
+        <p class="post">App developer</p>
+      </div>
+      <div class="grid-item">
+        <img src="../../assets/images/lakpa.png" alt="image not supported" /><br />
+        <p class="name">Lakpa Sherpa</p>
+        <p class="post">Front end developer</p>
       </div>
     </div>
+  </div>
   </div>
 
   <div class="container">
@@ -258,41 +315,42 @@
 
   <!-- Footer -->
   <footer>
-    <div class="footer-section">
-      <h1>Products</h1>
-      <ul>
-        <li><a href="#">Shared Hosting</a></li>
-        <li><a href="#">Wordpress</a></li>
-        <li><a href="#">Ecommerce</a></li>
-        <li><a href="#">Reseller Hosting</a></li>
-      </ul>
-    </div>
+    <div class="footer">
+      <div class="footer-section">
+        <h1>Products</h1>
+        <ul>
+          <li><a href="#">Shared Hosting</a></li>
+          <li><a href="#">Wordpress</a></li>
+          <li><a href="#">Ecommerce</a></li>
+          <li><a href="#">Reseller Hosting</a></li>
+        </ul>
+      </div>
 
-    <div class="footer-section">
-      <h1>Solutions</h1>
-      <ul>
-        <li><a href="#">Cloud Hosting</a></li>
-        <li><a href="#">Python Hosting</a></li>
-        <li><a href="#">Django Hosting</a></li>
-        <li><a href="#">Nodejs Hosting</a></li>
-      </ul>
-    </div>
+      <div class="footer-section">
+        <h1>Solutions</h1>
+        <ul>
+          <li><a href="#">Cloud Hosting</a></li>
+          <li><a href="#">Python Hosting</a></li>
+          <li><a href="#">Django Hosting</a></li>
+          <li><a href="#">Nodejs Hosting</a></li>
+        </ul>
+      </div>
 
-    <div class="footer-section">
-      <h1>Company</h1>
-      <ul>
-        <li><a href="#">Our Team</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">Support</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+      <div class="footer-section">
+        <h1>Company</h1>
+        <ul>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="download-buttons">
+        <a href="#" class="app-store-btn"><i class="fab fa-apple"></i> Download on the App Store</a>
+        <a href="#" class="play-store-btn"><i class="fab fa-google-play"></i> Get it on Google Play</a>
+      </div>
     </div>
-    <div class="download-buttons">
-      <a href="#" class="app-store-btn"><i class="fab fa-apple"></i> Download on the App Store</a>
-      <a href="#" class="play-store-btn"><i class="fab fa-google-play"></i> Get it on Google Play</a>
-    </div>
-
-    <div class="CopyRightSection">
+    <div class="CopyRightSection" style="width:100%">
       <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
       <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
       <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
@@ -303,6 +361,8 @@
 <script src="../JS/landing.js"></script>
 <script src="../JS/navigation.js"></script>
 <script src="/SplideJs/Spilide.js"></script>
+<script src="../swiper/swiper-bundle.min.js"></script>
+<script src="../swiper/script.js"></script>
 <script>
   var splide = new Splide(".splide", {
     type: "loop",
